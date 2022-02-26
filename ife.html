@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="css/kube.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.min.css" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script src="angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <title>Ife 2</title>
+    <style>
+        .intro h1:before {
+            /* Edit this with your name or anything else */
+            content: 'IFEDOLAPO';
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div class="main-nav">
+        <div class="container">
+            <header class="group top-nav">
+                <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+                    <span class="logo">DRACO</span>
+                </div>
+                <nav id="navbar-1" class="navbar item-nav">
+                    <ul>
+                        <li><a href="#!/">HOME</a></li>
+                        <li><a href="#!about">ABOUT</a></li>
+                        <li><a href="#!skills">SKILLS</a></li>
+                        <li><a href="#!education">EDUCATION</a></li>
+                        <li><a href="#!experience">EXPERIENCE</a></li>
+                        <li><a href="#!contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <div ng-view>
+
+    </div>
+</body>
+<script>
+    const app = angular.module('myApp', ['ngRoute']);
+    app.config(function($routeProvider) {
+        $routeProvider
+            .when("/", {
+                template: `<div class="container">
+      <div class="image">
+        <img src="Images/random girl 2.jpeg" height="500" width="350">
+      </div>
+      <div class="text">
+        <h1>Hi, I am Ife.</h1>
+         <p>Passionate about Software Engineering.</p>
+            <p>Student at <span id="typed"></span></p>
+      </div>
+    </div>`
+            })
+            .when("/about", {
+                template: `<div class="container">
+      <div class="image">
+        <img src="Images/random girl 1.jpeg" height="500" width="350">
+      </div>
+      <div class="text">
+        <h1 class="job">ABOUT ME</h1>
+         <p>Hello, <br>
+            I'm Ifedolapo Ajayi.<br>
+            I am passionate about Software Engineering and Web Development.<br>
+            I am a student of Aptech Computer Education where I am currently studying for an<br>Advanced Diploma in Software Engineering.<br>
+            I am a skilled full stack developer and I am a master in UI / UX design.<br>
+            I am also skilled with Responsive Design, grid - based layouts and Web building.<br>
+            I love working with Bootstrap, Angular Js and Wordpress services that is an immense<br>pleasure to invent more attractive designs for me to build on.<br>
+            Lastly, I am a quick learner and a team player that helps get the job done.
+            </p>
+      </div>
+    </div>`
+            })
+
+        .when("/experience", {
+            template: `<div class = "work section second" id = "experiences">
+                    <div class = "containertwo">
+                    <h1>Work <br> Experiences </h1> 
+                    <ul class = "work-list">
+                    <li>March, 2020 - Present </li> 
+                    <li><a href ="#">Agiliti Techpartners, LLP</a></li>
+                    <li>Software Engineer(UI / UX Designer)</li> 
+                    </ul> 
+                <ul class = "work-list">
+                    <li>September,2019 - March,2020</li> 
+                    <li><a href ="#">Tricky Global Solutions Pvt.Ltd</a></li>
+                    <li>Software Developer(Full Stack Developer)</li> 
+                    </ul> 
+                    </div> 
+                    </div>`
+        })
+
+        .when("/education", {
+            template: `<div class ="work section second" id = "education">
+                            <div class = "containertwo">
+                            <h1>My<br>Education</h1> 
+                            <ul class = "work-list">
+                            <li>2022 - 2023</li> 
+                            <li><a href ="#">Bachelor Of Computer Science(Software Engineering)</a></li> 
+                            <li>University of Portsmouth, UK</li> 
+                            </ul> 
+                            <ul class = "work-list">
+                            <li>2016 - 2020</li> 
+                            <li><a href ="#">Bachelor of Science in Botanical Science</a></li> 
+                            <li>University of Lagos, Nigeria</li> 
+                            </ul> 
+                            </div>
+                            </div>`
+        })
+
+        .when("/skills", {
+                template: `<div class ="skills section second" id = "skills">
+                    <div class ="containertwo">
+                    <h1>Technical<br>Skills</h1> 
+                    <ul class ="skill-list list-flat">
+                    <li>Web Technology</li> 
+                    <li>HTML5 / CSS3 / SASS / PHP / Javascript</li> 
+                    </ul> 
+                    <ul class ="skill-list list-flat">
+                    <li>Database</li> 
+                    <li>MySQL / MongoDB / Oracle / Access</li> 
+                    </ul> 
+                    <ul class ="skill-list list-flat">
+                    <li>Framework</li> 
+                    <li>Laravel / CodeIgniter / Zend / Ruby On Rails</li> 
+                    </ul> 
+                    </div>
+                    </div>`
+            })
+            .when("/contact", {
+                template: `<div class ="skills section second" id = "skills">
+                    <div class ="containertwo">
+                    <h1>Get<br> In Touch</h1> 
+                    <ul class ="skill-list list-flat">
+                    <li><a href ="#">EMAIL:</a></li> 
+                    <li>ifedolapoajayi0@gmail.com</li> 
+                    </ul> 
+                    <ul class ="skill-list list-flat">
+                    <li><a href ="#">PHONE:</a></li> 
+                    <li>+2348096539067</li> 
+                    </ul> 
+                    <ul class ="skill-list list-flat">
+                    <li><a href ="#">ADDRESS:</a></li> 
+                    <li>7 Adetokunbo Osho Crescent, Lagos.</li> 
+                    </ul>
+                    <input type="text" name="UserName"size=35 maxlength=35 placeholder="Name"><br><br>
+                    <input type="text" name="UserName"size=35 maxlength=35 placeholder="Email"><br><br>
+                    <textarea id="txt_message" rows="4" cols="20" Required="required" placeholder="Message"></textarea> 
+                    </div>
+                    </div>`
+            })
+    })
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/typed.min.js"></script>
+<script src="js/kube.min.js"></script>
+<script src="js/site.js"></script>
+
+<script>
+    function newTyped() {}
+    $(function() {
+        $("#typed").typed({ // Change to edit type effect 
+            strings: ["Aptech Computer Education.", "University of Lagos."],
+            typeSpeed: 5,
+            backDelay: 700,
+            contentType: "html",
+            loop: !0,
+            resetCallback: function() {
+                newTyped()
+            }
+        }), $(".reset").click(function() {
+            $("#typed").typed("reset")
+        })
+    });
+</script>
+
+</html>
